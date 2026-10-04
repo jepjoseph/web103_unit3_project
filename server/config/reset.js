@@ -75,10 +75,48 @@ const seedLocations = async () => {
   }
 };
 
+const seedEvents = async () => {
+  const events = [
+    ["Live Music Night", "2026-10-10", "19:00:00", "", 1],
+    ["Community Meetup", "2026-10-12", "18:30:00", "", 1],
+    ["Blues Night", "2026-10-15", "20:00:00", "", 2],
+    ["Open Mic Night", "2026-10-18", "19:30:00", "", 2],
+    ["Fall Festival", "2026-10-20", "17:00:00", "", 3],
+    ["Community Movie Night", "2026-10-22", "19:00:00", "", 3],
+    ["Community Celebration", "2026-10-25", "18:00:00", "", 4],
+    ["Local Talent Showcase", "2026-10-28", "19:00:00", "", 4],
+  ];
+
+  try {
+    const result = await pool.query("SELECT COUNT(*) FROM events");
+
+    if (Number(result.rows[0].count) === 0) {
+      for (const event of events) {
+        await pool.query(
+          `
+            INSERT INTO events
+              (title, date, time, image, location_id)
+            VALUES
+              ($1, $2, $3, $4, $5)
+          `,
+          event,
+        );
+      }
+
+      console.log("events seeded successfully");
+    } else {
+      console.log("events table already contains data; skipping seed");
+    }
+  } catch (error) {
+    console.error("Error seeding events:", error);
+  }
+};
+
 const resetDatabase = async () => {
   try {
     await createTables();
     await seedLocations();
+    await seedEvents();
 
     console.log("database setup completed");
   } catch (error) {

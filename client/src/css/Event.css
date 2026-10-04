@@ -1,57 +1,63 @@
 .event-information {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    padding: 0px;
-    margin: 20px;
-    border: 2px solid white;
-    border-radius: 0px;
+  width: 100%;
+  min-height: 180px;
+  margin: 0;
+  padding: 24px;
+
+  background: rgba(3, 1, 64, 0.94);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 14px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .event-information img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .event-information-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 100%;
-    right: 0;
-    background-color: var(--primary);
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: 0.5s ease;
-}
-
-.event-information:hover .event-information-overlay {
-    width: 100%;
-    left: 0;
+  position: static;
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 .text {
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: static;
+  transform: none;
+  overflow: visible;
+  text-align: center;
 }
 
-.text i {
-    margin-right: 10px;
+.text h3 {
+  margin: 0 0 18px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
 }
 
 .text p {
-    color: white;
-    margin-top: 10px;
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.text i {
+  margin-right: 8px;
+  color: rgb(55, 216, 232);
 }
 
 .negative-time-remaining {
-    background-color: red;
-    color: white;
-    font-weight: 700;
-    padding: 10px;
-    text-align: center;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
 }
