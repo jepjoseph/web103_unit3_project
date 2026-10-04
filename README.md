@@ -19,17 +19,17 @@ The following **required** functionality is completed:
 
   ### PostgreSQL Database Evidence
 
-        Render PostgreSQL database:
+  Render PostgreSQL database:
 
-        ![Render PostgreSQL database](client/src/assets/database-info.png)
+  ![Render PostgreSQL database](client/src/assets/database-info.png)
 
-        Locations table:
+  Locations table:
 
-        ![Locations table](client/src/assets/locations.png)
+  ![Locations table](client/src/assets/locations.png)
 
-        Events table:
+  Events table:
 
-        ![Events table](client/src/assets/events.png)
+  ![Events table](client/src/assets/events.png)
 
 - [x] **The web app displays a title.**
 - [x] **Website includes a visual interface that allows users to select a location they would like to view.**
