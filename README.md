@@ -14,8 +14,23 @@ The following **required** functionality is completed:
 
 - [x] **The web app uses React to display data from the API**
 - [x] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
-  - [ ] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
-  - [ ] **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT \* FROM tablename;' to display your table contents.**
+  - [x] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [x] **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT \* FROM tablename;' to display your table contents.**
+
+  ### PostgreSQL Database Evidence
+
+        Render PostgreSQL database:
+
+        ![Render PostgreSQL database](client/src/assets/database-info.png)
+
+        Locations table:
+
+        ![Locations table](client/src/assets/locations.png)
+
+        Events table:
+
+        ![Events table](client/src/assets/events.png)
+
 - [x] **The web app displays a title.**
 - [x] **Website includes a visual interface that allows users to select a location they would like to view.**
   - [x] _Note: A non-visual list of links to different locations is insufficient._
@@ -37,11 +52,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="./client/src/assets/demo.gif" title="Video Walkthrough" width="" alt="Video Walkthrough" />
+<img src='https://imgur.com/a/NnAYVc3' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ... GIF tool here
+GIF created with N-Studio
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -50,7 +66,7 @@ GIF created with ... GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+One of the main challenges I encountered was connecting the React frontend, Express backend, and PostgreSQL database so that each location displayed only its associated events. I also had to resolve a CORS issue that initially prevented the frontend from accessing the API. Another challenge was improving the starter UnityGrid interface while preserving its original interactive location map. I adjusted the location cards and event styling to make the information clear and readable while keeping each location connected to its correct detail page.
 
 ## License
 
